@@ -184,3 +184,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Wlan
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0
+
+# ZRAM
+# By default, enable zram; experiment can toggle the flag,
+# which takes effect on boot
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.zram_enabled=1
