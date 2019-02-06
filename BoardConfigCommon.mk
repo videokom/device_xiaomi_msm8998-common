@@ -50,6 +50,7 @@ BOARD_KERNEL_CMDLINE := androidboot.console=ttyMSM0 androidboot.hardware=qcom
 BOARD_KERNEL_CMDLINE += user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3
 BOARD_KERNEL_CMDLINE += service_locator.enable=1
 BOARD_KERNEL_CMDLINE += swiotlb=2048
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8998
@@ -113,6 +114,11 @@ USE_XML_AUDIO_POLICY_CONF := 1
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(PLATFORM_PATH)/bluetooth
 BOARD_HAVE_BLUETOOTH_QCOM := true
+
+# CAF HALs
+TARGET_QCOM_AUDIO_VARIANT := caf-msm8998
+TARGET_QCOM_MEDIA_VARIANT := caf-msm8998
+TARGET_QCOM_DISPLAY_VARIANT := caf-msm8998
 
 # Camera
 TARGET_USES_MEDIA_EXTENSIONS := true
